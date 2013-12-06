@@ -61,6 +61,7 @@ public class Installer {
 																// workplace uri
 
 		Map<String, String> parameter = new HashMap<String, String>();
+        parameter.put("dbCreateConStr", "true");
 		parameter.put("submit", "true");
 		parameter.put("createTables", "true");
 		parameter.put("db", p.getProperty(DRIVER_DATABASE));

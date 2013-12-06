@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
-import java.util.Enumeration;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
@@ -186,9 +183,21 @@ public class FakeHttpRequest implements HttpServletRequest {
 	}
 
 	@SuppressWarnings("unchecked")
-	public Map getParameterMap() {
-		
-		return null;
+	public Map<String, String[]> getParameterMap() {
+		Map<String, String[]> map = new HashMap<String, String[]>();
+
+        for (Object o : parameter.keySet()) {
+            String key = (String) o;
+            Object obj = parameter.get(key);
+            if ( obj instanceof String ) {
+                String[] arr = new String[1];
+                arr[0] = (String)obj;
+                map.put(key, arr);
+            } else {
+                map.put(key, (String[])obj);
+            }
+        }
+        return map;
 	}
 
 	@SuppressWarnings("unchecked")
