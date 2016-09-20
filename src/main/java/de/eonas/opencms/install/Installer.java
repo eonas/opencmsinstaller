@@ -131,6 +131,18 @@ public class Installer {
 		shell.start(new FileInputStream(new File(Bean.getWebAppRfsPath()
 				+ CmsSetupDb.SETUP_DATA_FOLDER + "cmssetup.txt")));
 
+		// Workaround für Ansible
+		// Damit soll unterschieden werden, ob der Installer schon mal gelaufen ist
+		String file = null;
+		try {
+			file = opencmsbasedir + "installerFinished";
+			File f = new File(file);
+			f.getParentFile().mkdirs();
+			f.createNewFile();
+		} catch (Exception e) {
+			System.err.println("Failed to create Infofile: " + file);
+		}
+		
         System.exit(0);
 	}
 
