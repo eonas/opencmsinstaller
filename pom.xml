@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.eonas.portal</groupId>
     <artifactId>opencmsinstaller</artifactId>
-    <version>10.5.1.1-RC-SNAPSHOT</version>
+    <version>10.5.1.1</version>
     <name>Installer for OpenCms</name>
     <description>Installer for OpenCms</description>
     <parent>
