@@ -2,17 +2,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.eonas.portal</groupId>
     <artifactId>opencmsinstaller</artifactId>
-    <version>10.4.7-SNAPSHOT</version>
+    <version>10.5.1-SNAPSHOT</version>
     <name>Installer for OpenCms</name>
     <description>Installer for OpenCms</description>
     <parent>
         <groupId>de.eonas.portal.parentpoms</groupId>
         <artifactId>root</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2</version>
     </parent>
 
     <properties>
-        <opencms.version>10.4.7</opencms.version>
+        <opencms.version>10.5.1</opencms.version>
     </properties>
 
     <dependencies>
