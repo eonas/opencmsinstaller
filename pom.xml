@@ -12,7 +12,7 @@
     </parent>
 
     <properties>
-        <opencms.version>10.5.1</opencms.version>
+        <opencms.version>10.5.4</opencms.version>
     </properties>
 
     <dependencies>
