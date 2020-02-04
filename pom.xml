@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.eonas.portal</groupId>
     <artifactId>opencmsinstaller</artifactId>
-    <version>10.5.1.3</version>
+    <version>10.5.4.1</version>
     <name>Installer for OpenCms</name>
     <description>Installer for OpenCms</description>
     <parent>
@@ -12,7 +12,8 @@
     </parent>
 
     <properties>
-        <opencms.version>10.5.4</opencms.version>
+        <opencms.version>10.5.4-20200203</opencms.version>
+	<opencms.baseversion>10.5.4</opencms.baseversion>
     </properties>
 
     <dependencies>
@@ -35,7 +36,7 @@
         <dependency>
             <groupId>org.opencms</groupId>
             <artifactId>opencms-setup</artifactId>
-            <version>${opencms.version}</version>
+            <version>${opencms.baseversion}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
